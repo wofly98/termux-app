@@ -2,6 +2,7 @@
 GITHUB_SHA=A12345678a
 GITHUB_ENV=""
 PACKAGE_VARIANT=apt-android-7
+#test
           exit_on_error() { echo "$1"; exit 1; }
 
           echo "Setting vars"
