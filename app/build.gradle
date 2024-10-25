@@ -161,7 +161,7 @@ def validateVersionName(String versionName) {
 
 def downloadBootstrap(String arch, String expectedChecksum, String version) {
     def digest = java.security.MessageDigest.getInstance("SHA-256")
-
+    return
     def localUrl = "src/main/cpp/bootstrap-" + arch + ".zip"
     def file = new File(projectDir, localUrl)
     if (file.exists()) {
@@ -206,7 +206,7 @@ clean {
     doLast {
         def tree = fileTree(new File(projectDir, 'src/main/cpp'))
         tree.include 'bootstrap-*.zip'
-        tree.each { it.delete() }
+//        tree.each { it.delete() }
     }
 }
 
